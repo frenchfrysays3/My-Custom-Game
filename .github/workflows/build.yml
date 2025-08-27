@@ -13,11 +13,6 @@ jobs:
             - name: Make Build Directory
               run: mkdir build
 
-            - name: Clone Repository
-              uses: actions/checkout@v3
-              with:
-                repository: "frenchfrysays3/my-custom-game"
-
             - name: Install curl
               run: sudo apt-get install curl -y
 
