@@ -10,7 +10,7 @@ jobs:
     buildOnLinux:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout repository
+            - name: Checkout code
               uses: actions/checkout@v4
 
             - name: Setup Cmake version 4.0.2
@@ -23,6 +23,14 @@ jobs:
 
             - name: Build the program
               run: cmake --build build --config RelWithDebInfo
+
+            - name: Upload game
+              uses: actions/upload-artifact@v4
+              with:
+                name: game-files
+                path: build/CustomGame-v0.0.1, build/*.so
+                if-no-files-found: warn
+                retention-days: 90
 
             - name: Upload game
               uses: actions/upload-artifact@v4
