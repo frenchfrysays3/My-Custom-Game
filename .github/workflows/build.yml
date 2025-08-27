@@ -18,11 +18,11 @@ jobs:
               with:
                 repository: "frenchfrysays3/my-custom-game"
 
-            - name: Install wget
-              run: sudo apt-get install wget
+            - name: Install curl
+              run: sudo apt-get install curl -y
 
             - name: Download the CMakeLists.txt file
-              run: wget https://raw.githubusercontent.com/frenchfrysays3/My-Custom-Game/refs/heads/main/CMakeLists.txt
+              run: curl -o CMakeLists.txt https://raw.githubusercontent.com/frenchfrysays3/My-Custom-Game/refs/heads/main/CMakeLists.txt
 
     buildOnLinux:
         runs-on: ubuntu-latest
