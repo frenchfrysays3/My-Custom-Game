@@ -23,3 +23,11 @@ jobs:
 
             - name: Build the program
               run: cmake --build build --config RelWithDebInfo
+
+            - name: Upload game
+              uses: actions/upload-artifact@v4
+              with:
+                name: game-files
+                path: build/*.exe, build/*.dll
+                if-no-files-found: warn
+                retention-days: 90
