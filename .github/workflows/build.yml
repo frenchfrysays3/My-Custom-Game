@@ -28,6 +28,6 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                 name: game-files
-                path: build/RelWithDebInfo/*.exe, build/RelWithDebInfo/*.dll
+                path: build/CustomGame-v*, build/*.so
                 if-no-files-found: warn
                 retention-days: 90
