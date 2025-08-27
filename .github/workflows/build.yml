@@ -10,8 +10,8 @@ jobs:
     setupJob:
         runs-on: ubuntu-latest
         steps:
-            - name: Make Build Directory
-              run: mkdir build
+            - name: Go to where code is
+              run: cd ..
 
             - name: Install curl
               run: sudo apt-get install curl -y
