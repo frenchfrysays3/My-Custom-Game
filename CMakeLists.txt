@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0.0)
+cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
@@ -21,4 +21,5 @@ add_library(${PROJECT_NAME}-v${PROJECT_VERSION}library1 SHARED
     # (.hpp and .h files are called by these files so they get added
     # even thogh they arent specified)
     src/libraries/library.cpp
+
 )
